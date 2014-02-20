@@ -17,6 +17,7 @@ $(document).ready(function(){
 	});
 
 	$('.js-send-button').click(function(){
+		console.log('You clicked a button')
 
 		var messageInstance = {
 			username: $('.username').val(),
@@ -25,9 +26,14 @@ $(document).ready(function(){
 			appId: 'TimeBandits'
 		};
 
+		console.log('Variable messageInstance was created')
+
 		var newMessage = messages.add(messageInstance);
 
-		new MessageView = ({model: newMessage});
+		console.log('User inputs pushed to messageInstance')
+
+		new MessageView({model: newMessage});
+		console.log('new MessageView created')
 
 		newMessage.save()
 	});
