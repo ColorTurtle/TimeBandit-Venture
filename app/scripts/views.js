@@ -29,4 +29,3 @@ var MessageView = Backbone.View.extend({
 	// Add second view here (when ready) to show
 	// team when username is clicked
 });
-
