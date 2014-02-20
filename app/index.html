@@ -57,16 +57,17 @@
 
         <!-- Template for message-box -->
         <script id="message-template" type="text/template">
-        <div class="user-name col-md-2 col-sm-2 col-xs-2 text-right"><%= username %>
+        <div class="user-name col-md-2 col-sm-2 col-xs-2 text-right"><%= _.escape(username) %>
         </div>
         <div class="msg-content col-md-7 col-sm-7 col-xs-7 text-left">
-                <span><%= messageText %> 
+                <span><%= _.escape(messageText) %> 
                 </span>
         </div>
         <div class="timestamp pull-right col-md-2 col-sm-2 col-xs-2">
             <span><%= messageDate %></span>
         </div>
         </script>
+
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
