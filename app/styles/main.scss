@@ -137,6 +137,12 @@ body {
             color: rgb(228, 226, 226);
             border-bottom: 1px solid #396279;
             height: 100px; 
+            overflow: hidden;
+
+            &.expand{
+                overflow: none;
+                height: auto;
+            }
 
             .msg-content {
 
