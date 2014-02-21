@@ -10,7 +10,7 @@ submitNewUser = function(){
 		window.currentUser = {
 			username: newUser
 		};
-		
+
 		$('#myModal').modal('hide');
 
 		$('.message-parent').show();
@@ -24,7 +24,7 @@ submitNewUser = function(){
 submitNewMessage = function(){
 	if( $('#js-message-text').val() !== ''){
 		var awesomeMessage = $('#js-message-text').val();
-		
+
 		var msg = new Message({
 			username: currentUser.username,
 			messageText: awesomeMessage,
@@ -54,7 +54,7 @@ $(document).ready(function(){
 			console.log('Sorry, guys. Something has gone wrong.')
 		},
 	}, {reset:true});
-	
+
 	//Possible to focus on input at appearance of modal?
 	// $('.js-user-input').hover(function(){		
 	// 	$('#input-username')focus();
@@ -126,7 +126,3 @@ $('.js-test-send-button').click(function(){
 	newMessage.save()
 });
 // End Testing
-
-
-
-
