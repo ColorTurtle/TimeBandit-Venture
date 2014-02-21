@@ -8,7 +8,6 @@ var Message = Backbone.Model.extend({
 	defaults:{
 		"username": "Fred",
 		"messageText": "'Sup?",
-		"messageDate": Date.now(),
 		"addId": "TimeBandits",
 		"options": {}
 	},
@@ -19,17 +18,22 @@ var Message = Backbone.Model.extend({
       		this.set(key, this.sanitize(val));
     	}, this);
   	},
+
   	sanitize: function (str) { 
     	return _.escape(str) 
-  	} 
+  	}
   	// End sanitizing
 });
 
 var MessagesCollection = Backbone.Collection.extend({
 	model: Message,
 
+	comparator: "messageDate",
+
 	url: 'http://tiny-pizza-server.herokuapp.com/collections/messages'
 });
+
+
 
 // For use in testing only
 var TestMessagesCollection = Backbone.Collection.extend({

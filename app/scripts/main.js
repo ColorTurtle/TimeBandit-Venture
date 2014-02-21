@@ -19,6 +19,8 @@ submitNewUser = function(){
 		$('.js-logout-btn').show();
 	}
 	$('#input-username').val('');
+
+	$(".message-stream").scrollTop($(".message-stream")[0].scrollHeight);
 };
 
 submitNewMessage = function(){
@@ -28,6 +30,7 @@ submitNewMessage = function(){
 		var msg = new Message({
 			username: currentUser.username,
 			messageText: awesomeMessage,
+			messageDate: Date.now()
 		});
 
 		var newMessage = messages.add(msg);
@@ -40,10 +43,14 @@ submitNewMessage = function(){
 	$('#js-message-text').val('');
 };
 
+
+//Start of jquery
 $(document).ready(function(){
 	window.messages = new MessagesCollection( );
 
 	messages.fetch({
+		reset: true,
+
 		success: function(){
 			messages.each(function(message){
 				new MessageView({model: message});
@@ -53,11 +60,11 @@ $(document).ready(function(){
 		error: function(){
 			console.log('Sorry, guys. Something has gone wrong.')
 		},
-	}, {reset:true});
+	});
 
-	//Possible to focus on input at appearance of modal?
-	// $('.js-user-input').hover(function(){		
-	// 	$('#input-username')focus();
+	//Possible to focus on input at appearance of modal? on click of launch and on hover of myModal not working
+	// $(".modal").on('shown', function() {
+ 	// 	 	$("#input-username").focus();
 	// });
 
 	$('.js-start-chat').click(function(){
@@ -78,9 +85,9 @@ $(document).ready(function(){
 		}
 	});
 
-	$('#js-message-text').on('hover', function(){
+	$('#js-message-text').hover(function(){
 		$(this).focus();
-	})
+	});
 
 	$('#js-message-text').on('keypress', function(btnPress){
 		if(btnPress.which === 13) {
@@ -101,7 +108,7 @@ window.testMessages = new TestMessagesCollection( );
 testMessages.fetch({
 	success: function(){
 		testMessages.each(function(testMessage){
-			new MessageView({model: testMessage});
+			new OldMessageView({model: testMessage});
 		})
 	},
 
@@ -111,21 +118,16 @@ testMessages.fetch({
 });
 
 $('.js-test-send-button').click(function(){
-	console.log('You clicked a button')
 
 	var messageInstance = {
 		username: $('.username').val(),
 		messageText: $('.messageText').val(),
+		messageDate: Date.now()
 	};
-
-	console.log('Variable messageInstance was created')
 
 	var newMessage = messages.add(messageInstance);
 
-	console.log('User inputs pushed to messageInstance')
-
 	new MessageView({model: newMessage});
-	console.log('new MessageView created')
 
 	newMessage.save()
 });
