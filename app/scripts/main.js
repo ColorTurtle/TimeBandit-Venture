@@ -78,6 +78,10 @@ $(document).ready(function(){
 		}
 	});
 
+	$('#js-message-text').on('hover', function(){
+		$(this).focus();
+	})
+
 	$('#js-message-text').on('keypress', function(btnPress){
 		if(btnPress.which === 13) {
 			submitNewMessage();
