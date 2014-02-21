@@ -30,6 +30,7 @@ body {
     border-bottom: 1px solid #e5e5e5;
     background: rgb(28, 78, 104);
     margin-bottom: 0px;
+    padding-top: 10px;
 
     .container {
         padding: 0px;
@@ -37,6 +38,30 @@ body {
 
     .text-muted {
         color: white;
+    }
+
+    .launch-chat {
+        background: rgb(56, 141, 186);
+        border-radius: 0px;
+        padding: 10px 80px;
+
+        &:hover {
+            background: #3A7CA0;
+        }
+    }
+
+    h1 {
+        color: white;
+    }
+
+    .logout-btn {
+        background: rgb(56, 141, 186);
+        border-radius: 0px;
+        padding: 10px 80px;
+
+        &:hover {
+            background: #3A7CA0;
+        }
     }
 
     /* Make the masthead heading the same height as the navigation */
@@ -52,21 +77,23 @@ body {
 .footer {
     padding-top: 19px;
     color: #777;
-    border-top: 1px solid #e5e5e5;
 }
 
 .container-narrow > hr {
     margin: 30px 0;
 }
 
+.js-logout-btn{
+    display: none;
+}
+
 /* Main marketing message and sign up button */
 .message-parent {
+    display: none;
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
-    .btn {
-        font-size: 21px;
-        padding: 14px 24px;
-    }
+    padding: 14px 24px;
+
     .message-stream {
         
          

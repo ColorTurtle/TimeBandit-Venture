@@ -1,3 +1,5 @@
+//collection of users for side div?
+
 var Message = Backbone.Model.extend({
 	idAttribute: '_id',
 
@@ -25,5 +27,4 @@ var TestMessagesCollection = Backbone.Collection.extend({
 	model: Message,
 
 	url: 'http://0.0.0.0:3000/collections/contacts'
-
 })
