@@ -29,16 +29,22 @@
 
         <div class="header">
             <div class="container">
-                <h3 class="text-muted">converse or ChatterBug</h3>
-                <!-- Button trigger modal -->
-                <button class="js-launch-chat btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">Launch!</button>
-                 <button class="js-logout-btn btn btn-primary btn-lg pull-right">Logout</button>
-                <!-- Modal -->
-            </div>
-        </div>
+                <div class="row">
+                    <div class="app-title col-md-9">
+                    <h3 class="text-muted">ChatterBug</h3>
+                    </div>
 
-        <div class="container">
-            <div class="js-user-input modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <!-- Button trigger modal -->
+                    <div class="headerbuttons col-md-3">
+                        <button class="js-launch-chat launch-chat btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
+                          Launch!
+                        </button>
+                        <button class="js-logout-btn logout-btn btn btn-primary btn-lg pull-right">Logout</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -46,15 +52,17 @@
                     <h4 class="modal-title" id="myModalLabel">User info:</h4>
                   </div>
                   <div class="modal-body">
-                    <input type="text" id="input-username" placeholder="Enter username here">
+                    <input type="text" class="form-control"id="input-username" placeholder="Enter username here">
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="js-start-chat btn btn-primary">Start Talking</button>
+                    <button type="button" class="btn btn-default close-button" data-dismiss="modal">Close</button>
+                    <button type="button" class="js-start-chat start-chat btn btn-primary">Start Talking</button>
                   </div>
                 </div>
               </div>
             </div>
+        </div>
+        <div class="container">
             <div class="message-parent">
                 <div class="message-stream js-message-stream">
                     <!-- New Message -->
@@ -62,12 +70,12 @@
                     <div class="form-group">
                         <input type="text" class="form-control" id="js-message-text" placeholder="Say Something!">
                     </div>
-                    <button class="btn btn-default js-send-button">Go!</button>
+                    <button class="btn btn-default js-send-button send-button">Go!</button>
             </div>
 
 
             <div class="footer">
-                <p>♥ from the Yeoman team</p>
+                <p>♥ from the Time Bandits</p>
             </div>
 
         </div>
