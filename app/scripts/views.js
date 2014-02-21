@@ -17,8 +17,9 @@ var MessageView = Backbone.View.extend({
 	render: function(){
 		var renderedTemplate = this.createTemplate(this.model.attributes);
 
-
 		this.$el.html( renderedTemplate );
+		
+		this.$el.find('.js-timestamp').html(new Date(parseInt(this.$el.find('.js-timestamp').html())).toLocaleTimeString());
 	},
 
 	toggleExpandMessage: function(){
