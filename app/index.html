@@ -32,13 +32,13 @@
                 <h3 class="text-muted">converse or ChatterBug</h3>
                 <!-- Button trigger modal -->
                 <button class="js-launch-chat btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">Launch!</button>
-                 <button class="js-logout-btn btn btn-primary btn-lg">Logout</button>
+                 <button class="js-logout-btn btn btn-primary btn-lg pull-right">Logout</button>
                 <!-- Modal -->
             </div>
         </div>
 
         <div class="container">
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="js-user-input modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -91,6 +91,7 @@
         <script src="bower_components/jquery/jquery.js"></script>
         <script src="bower_components/underscore/underscore.js"></script>
         <script src="bower_components/backbone/backbone.js"></script>
+    
         <!-- endbower -->
         <!-- endbuild -->
 
