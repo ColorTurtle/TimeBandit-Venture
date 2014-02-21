@@ -128,20 +128,22 @@ body {
 
     .message-stream {
         
-         
-        .message-box {
+        .message-box .row{
             margin-bottom: 10px;
             position: relative;
             
             font-size: 18px;
             color: rgb(228, 226, 226);
             border-bottom: 1px solid #396279;
-
-            &.expand {
-                background: red;
-            }
+            height: 100px;
             
+
+             &.expand {
+                background: red;
+            } 
+
             .msg-content {
+
 
             }
             .user-name {

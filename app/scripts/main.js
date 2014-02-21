@@ -4,7 +4,7 @@ console.log('We have the best team! Go TimeBandits!');
 //functions:
 submitNewUser = function(){
 	if($('#input-username').val() !== '') {
-
+	
 		var newUser = $('#input-username').val(); 
 
 		window.currentUser = {
