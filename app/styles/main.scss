@@ -127,6 +127,8 @@ body {
     }
 
     .message-stream {
+        height: 500px;
+        overflow-y: scroll;
         
         .message-box {
             margin-bottom: 10px;
