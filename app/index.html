@@ -27,17 +27,17 @@
         <![endif]-->
 
 
-        <div class="container">
-            <div class="header">
-                <h3 class="text-muted">timebandit venture</h3>
+        <div class="header">
+            <div class="container">
+                <h3 class="text-muted">converse or ChatterBug</h3>
+                <!-- Button trigger modal -->
+                <button class="js-launch-chat btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">Launch!</button>
+                 <button class="js-logout-btn btn btn-primary btn-lg">Logout</button>
+                <!-- Modal -->
             </div>
+        </div>
 
-            <!-- Button trigger modal -->
-            <button class="js-launch-chat btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-              Launch!
-            </button>
-            <button class="js-logout-btn btn btn-primary btn-lg">Logout</button>
-            <!-- Modal -->
+        <div class="container">
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -55,7 +55,6 @@
                 </div>
               </div>
             </div>
-
             <div class="message-parent">
                 <div class="message-stream js-message-stream">
                     <!-- New Message -->
@@ -81,7 +80,7 @@
                 <span><%= _.escape(messageText) %> 
                 </span>
         </div>
-        <div class="timestamp pull-right col-md-2 col-sm-2 col-xs-2">
+        <div class="timestamp pull-right text-right col-md-2 col-sm-3 col-xs-4">
             <span><%= messageDate %></span>
         </div>
         </script>
