@@ -1,5 +1,5 @@
 var MessageView = Backbone.View.extend({
-	className: 'js-message-box row',
+	className: 'js-message-box message-box row',
 
 	createTemplate: _.template($('#message-template').text()),
 
@@ -20,7 +20,7 @@ var MessageView = Backbone.View.extend({
 		var renderedTemplate = this.createTemplate( this.model.attributes );
 
 		this.$el.html( renderedTemplate );
-	},
+	}
 
 	// setExpandMessage: function(){
 	// 	this.$el.toggleClass('expand');

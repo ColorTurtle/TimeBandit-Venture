@@ -1,7 +1,7 @@
 console.log('We have the best team! Go TimeBandits!');	
 
 $(document).ready(function(){
-	window.messages = new MessagesCollection( );
+	window.messages = new MessagesCollection();
 
 	messages.fetch({
 		success: function(){

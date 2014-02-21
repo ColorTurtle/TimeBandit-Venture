@@ -44,6 +44,7 @@ body {
         background: rgb(56, 141, 186);
         border-radius: 0px;
         padding: 10px 80px;
+        margin-top: 15px;
 
         &:hover {
             background: #3A7CA0;
@@ -52,12 +53,14 @@ body {
 
     h1 {
         color: white;
+        margin-top: 0px;
     }
 
     .logout-btn {
         background: rgb(56, 141, 186);
         border-radius: 0px;
-        padding: 10px 80px;
+        padding: 0px 55px;
+        margin-right: 50px;
 
         &:hover {
             background: #3A7CA0;
@@ -69,7 +72,8 @@ body {
         margin-top: 0;
         margin-bottom: 0;
         line-height: 40px;
-        padding-bottom: 19px;
+        padding-bottom: 25px;
+        padding-top: 20px;
     }
 }
 
@@ -87,12 +91,40 @@ body {
     display: none;
 }
 
+// Begin modal styling
+.start-chat {
+    background: rgb(56, 141, 186);
+    border-radius: 0px;
+    &:hover {
+        background: #3A7CA0;
+    }
+}
+
+.close-button {
+    border-radius: 0px;
+}
+
+
 /* Main marketing message and sign up button */
 .message-parent {
     display: none;
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
     padding: 14px 24px;
+
+    .send-button {
+        padding: 6px 100px;
+        font-size: 18px;
+        line-height: 1.42857;
+        border-radius: 0px;
+        background: rgb(56, 141, 186);
+        color: white;
+        border: none;
+
+        &:hover {
+            background: #3A7CA0;
+        }
+    }
 
     .message-stream {
         
@@ -132,7 +164,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 800px;
+        max-width: 960px;
     }
 
     /* Remove the padding we set earlier */
