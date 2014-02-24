@@ -34,6 +34,13 @@ var MessagesCollection = Backbone.Collection.extend({
 
 	//url: 'http://0.0.0.0:3000/collections/messages'
 	url: 'http://tiny-pizza-server.herokuapp.com/collections/messages',
+
+	//Need to get rid of the crazy stuff that keeps showing up!	
+	parse: function(response){
+		return _.filter(response, function(msg){
+			return (_.isNumber(msg.messageDate) && msg.username !=='');
+		});
+	}	
 });
 
 
