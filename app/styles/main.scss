@@ -91,19 +91,73 @@ body {
     display: none;
 }
 
-// Begin modal styling
-.start-chat {
-    background: rgb(56, 141, 186);
-    border-radius: 0px;
-    &:hover {
-        background: #3A7CA0;
+//Playing with empty space:
+.welcome{
+    margin: 150px 0 75px 250px;
+
+    .bee{
+        width: 200px;
+        height: 250px;
+        margin-right: 5px;
+    }
+
+    .bee-talk{
+        height: 200px;
+        width: 200px;
+        margin-top: -280px;
+    }
+
+    h2{
+        position: absolute;
+        margin: -305px 0 0 240px;
     }
 }
 
-.close-button {
-    border-radius: 0px;
+// Begin modal styling
+.modal-header {
+    background: #ADADAF;
+    color: rgb(68, 69, 73);
+    font-size: 20px;
+    border-bottom: 1px solid rgb(68, 69, 73);
 }
 
+.modal-body{
+    background: rgb(56, 141, 186);
+    padding: 25px 0 10px 20px;
+
+    input {
+        width: 45%;
+        height: 40px;
+        font-size: 16px;
+        border: 1px solid;
+        box-shadow: 1px 1px 1px;
+    }
+}
+
+.modal-footer{
+    margin-top: 0;
+    background: rgb(56, 141, 186);
+    border: none;
+
+    .start-chat {
+        background: rgb(28, 78, 104);
+        border-radius: 0px;
+        width: 120px;
+        height: 36px;
+        &:hover {
+            background: #3A7CA0;
+        }
+    }
+
+    .close-button {
+        background: rgb(68, 69, 73);
+        border-radius: 0px;
+        width: 90px;
+        height: 36px;
+        border: none;
+        color: white;
+    }
+}
 
 /* Main marketing message and sign up button */
 .message-parent {
@@ -112,23 +166,44 @@ body {
     border-bottom: 1px solid #e5e5e5;
     padding: 14px 24px;
 
-    .send-button {
-        padding: 6px 100px;
+    .new-message{
+        padding: 35px 0;
+        background: #ADADAF;
+        margin: 10px 0 5px;
         font-size: 18px;
-        line-height: 1.42857;
-        border-radius: 0px;
-        background: rgb(56, 141, 186);
-        color: white;
-        border: none;
 
-        &:hover {
-            background: #3A7CA0;
+        .show-user{
+            padding: 0;
+            color: rgb(68, 69, 73);
         }
-    }
+
+        .message-input{
+            max-height: 45px;
+            max-width: 514px;
+            margin-left: 20px;
+            padding: 5px;
+        }
+
+        .send-button {
+            font-size: 18px;
+            line-height: 1.42857;
+            border-radius: 0px;
+            background: rgb(56, 141, 186);
+            color: white;
+            border: none;
+            margin-right: 15px;
+            height: 45px;
+
+            &:hover {
+                background: #3A7CA0;
+            }
+        }
+    }    
 
     .message-stream {
         height: 500px;
         overflow-y: scroll;
+        overflow-x: hidden;
 
         .message-box {
             margin-bottom: 10px;
@@ -136,7 +211,7 @@ body {
             font-size: 18px;
             color: rgb(228, 226, 226);
             border-bottom: 1px solid #396279;
-            height: 100px; 
+            height: 56px; 
             overflow: hidden;
 
             &.expand{
@@ -145,9 +220,9 @@ body {
             }
 
             .msg-content {
-
-
+                padding-bottom: 10px;
             }
+
             .user-name {
                 margin-left: 15px;
                 color: #ADADAF;
@@ -161,6 +236,11 @@ body {
 
         }
     }
+}
+
+.footer{
+    display: none;
+    float: right;
 }
 
 /* Supporting marketing content */
